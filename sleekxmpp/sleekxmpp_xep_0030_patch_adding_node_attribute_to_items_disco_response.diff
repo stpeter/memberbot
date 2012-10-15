@@ -1,0 +1,13 @@
+Index: plugins/xep_0030.py
+===================================================================
+--- plugins/xep_0030.py	(revision 98)
++++ plugins/xep_0030.py	(working copy)
+@@ -84,6 +84,8 @@
+ 			itemxml = ET.Element('item')
+ 			itemxml.attrib = item
+ 			query.append(itemxml)
++		if node:
++			query.attrib['node'] = node
+ 		self.xmpp.send(iq)
+ 	
+ 	def getItems(self, jid, node=None):

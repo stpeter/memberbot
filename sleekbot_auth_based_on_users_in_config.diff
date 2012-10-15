@@ -1,0 +1,34 @@
+Index: sleekbot.py
+===================================================================
+--- sleekbot.py	(revision 139)
++++ sleekbot.py	(working copy)
+@@ -43,8 +43,29 @@
+         self.botPlugin = {}
+         self.pluginConfig = {}
+         self.add_event_handler("session_start", self.start, threaded=True)
++	self.auto_authorize = False
+         self.register_bot_plugins()
+         self.registerCommands()
++	
++    def handler_presence_subscribe(self, xml):
++	"""
++	Subscriptions handling based on SleekBot config file.
++	
++	Overrides sleekxmpp.sleekxmpp.xmppclient.handler_presence_subscribe()
++	"""
++	from_jid = self.getjidbare(xml.attrib['from'])
++	if (self.auto_authorize == True or ((self.auto_authorize == False) and
++					    (from_jid in self.getMembers() or 
++					     from_jid in self.getAdmins() or 
++					     from_jid in self.getOwners()))):
++	    self.updateRoster(from_jid)
++	    self.send(self.makePresence(ptype='subscribed', pto=from_jid))
++	    if self.auto_subscribe:
++		self.send(self.makePresence(ptype='subscribe', pto=from_jid))
++	elif self.auto_authorize == False:
++	    self.send(self.makePresence(ptype='unsubscribed', pto=from_jid))
++	elif self.auto_authorize == None:
++	    pass
+     
+     def loadConfig(self, configFile):
+         """ Load the specified config. Does not attempt to make changes based upon config.

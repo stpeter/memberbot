@@ -1,0 +1,43 @@
+<config>
+	<!--Bot authorisation details-->
+	<auth jid='memberbot@jabber.org/Bot' pass='secret' priority='10' />
+	<!--When this is set, the bot will ignore requests from anyone who isn't a member (see <users>). When it isn't set, the bot will respond to anyone except outcasts. If you run the bot in an anonymous room, you almost certainly want this set to false-->
+	<rooms>
+		<!-- <muc room='bar@conference.jabber.org' nick='SleekBot' /> -->
+	</rooms>
+	<!--Location of the sqlite3 database used for persistent storage.-->
+	<storage file='memberbot.sqlite' />
+<!--  <require-membership /> -->
+	<!--Users the bot knows about. Owners have full access to the bot, admins have the next layer of access. If require-membership is set, the bot won't respond to anyone unless they have at least a member entry. Banned users are always ignored.-->
+	<users>
+		<owner>
+			<jid>gnauck@jabber.org</jid>
+		</owner>
+		<admin>
+			<jid>gnauck@gmail.com</jid>
+		</admin>
+		<member>
+			<jid>stpeter@jabber.org</jid>
+		</member>
+		<banned>
+			<!-- <jid>banneduser@server.com</jid> -->
+		</banned>
+	</users>
+
+	<plugins>
+		<bot>
+			<plugin name='memberbot'>
+				<config>
+					<!--<survey file='appl_2008_Q3.xml' dir='appl_2008_Q3/' />-->
+					<survey file='elect2012.xml' dir='elect2012/' />
+				</config>
+			</plugin>
+			<!--<plugin name='mood'>-->
+				<!--<config />-->
+			<!--</plugin>-->
+			<!--<plugin name='pubsub_browser'>-->
+				<!--<config />-->
+			<!--</plugin>-->
+		</bot>
+	</plugins>
+</config>

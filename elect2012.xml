@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<questions type='boardcouncil'>
+<!-- board -->
+  <item type='board'> 
+    <first_name>Mike</first_name>
+    <last_name>Taylor</last_name>
+    <text>http://wiki.xmpp.org/web/Mike_Taylor_for_Board_2012</text>
+  </item>
+  <item type='board'> 
+    <first_name>Jason</first_name>
+    <last_name>Frankel</last_name>
+    <text>http://wiki.xmpp.org/web/Jason_Frankel_for_Board_2012</text>
+  </item>
+  <item type='board'> 
+    <first_name>Ashley</first_name>
+    <last_name>Roach</last_name>
+    <text>http://wiki.xmpp.org/web/Ashley_Roach_for_Board_2012</text>
+  </item>
+  <item type='board'> 
+    <first_name>Florian</first_name>
+    <last_name>Jensen</last_name>
+    <text>http://wiki.xmpp.org/web/Florian_Jensen_for_Board_2012</text>
+  </item>  
+  <item type='board'> 
+    <first_name>Arc</first_name>
+    <last_name>Riley</last_name>
+    <text>http://wiki.xmpp.org/web/Arc_Riley_for_Board_2012</text>
+  </item>    
+
+<!-- council -->
+
+  <item type='council'> 
+    <first_name>Kevin</first_name>
+    <last_name>Smith</last_name>
+    <text>http://wiki.xmpp.org/web/Kevin_Smith_for_Council_2012</text>
+  </item> 
+ <item type='council'> 
+    <first_name>Matthew</first_name>
+    <last_name>Wild</last_name>
+    <text>http://wiki.xmpp.org/web/Matthew_Wild_for_Council_2012</text>
+  </item>
+  <item type='council'> 
+    <first_name>Ralph</first_name>
+    <last_name>Meijer</last_name>
+    <text>http://wiki.xmpp.org/web/Ralph_Meijer_for_Council_2012</text>
+  </item> 
+  <item type='council'> 
+    <first_name>Tobias</first_name>
+    <last_name>Markmann</last_name>
+    <text>http://wiki.xmpp.org/web/Tobias_Markmann_for_Council_2012</text>
+  </item>
+<item type='council'> 
+    <first_name>Matthew</first_name>
+    <last_name>Miller</last_name>
+    <text>http://wiki.xmpp.org/web/Matthew_Miller_for_Council_2012</text>
+  </item>
+ <item type='council'> 
+    <first_name>Lance</first_name>
+    <last_name>Stout</last_name>
+    <text>http://wiki.xmpp.org/web/Lance_Stout_for_Council_2012</text>
+  </item>    
+  <item type='council'> 
+    <first_name>Abhinav</first_name>
+    <last_name>Singh</last_name>
+    <text>http://wiki.xmpp.org/web/Abhinav_Singh_for_Council_2012</text>
+  </item>
+  <meeting>
+	<date>October 30, 2012</date>	
+  </meeting>
+</questions>
